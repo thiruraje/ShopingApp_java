@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<servlet>
+		<servlet-name>AdLogin</servlet-name>
+		<servlet-class>com.booking.test.AdminLogin</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AdLogin</servlet-name>
+		<url-pattern>/adminLogin</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AddCat</servlet-name>
+		<servlet-class>com.booking.test.AddCategory</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddCat</servlet-name>
+		<url-pattern>/addCategory</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>AddPro</servlet-name>
+		<servlet-class>com.booking.test.AddProduct</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddPro</servlet-name>
+		<url-pattern>/addProduct</url-pattern>
+	</servlet-mapping>
+	<display-name>WebTask1</display-name>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
