@@ -73,12 +73,13 @@ footer {
 				<table class="table">
 					<thead>
 						<tr>
-							<th scope="col">#</th>
 							<th scope="col">PRODUCT IMAGE</th>
 							<th scope="col">PRODUCT NAME</th>
 							<th scope="col">CATEGORY</th>
 							<th scope="col">ID</th>
 							<th scope="col">COLOR</th>
+							<th scope="col">RATE</th>
+							<th scope="col">DES</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -86,13 +87,13 @@ footer {
 						<% int i=1; %>
 							<%for (Product pro : productList) {%>
 							<tr>
-								
-								<td><%=pro.getProImg() %></td>
-						<td><img src="C:\Users\Thiru Raja\eclipse-workspace\WebTask1\src\main\webapp\images\<%=pro.getProImg()%>" width="100" height="100" alt=""/></td>
+								<td><img src="C:\Users\Thiru Raja\eclipse-workspace\WebTask1\src\main\webapp\images\<%=pro.getProImg()%>" width="60" height="60" alt=""/></td>
 								<td><%=pro.getProName() %></td>
 								<td><%=pro.getProCategory() %></td>
 								<td><%=pro.getProId() %></td>
 								<td><%=pro.getProColor() %></td>
+								<td><%=pro.getProRate()%></td>
+								<td><%=pro.getProDes()%></td>
 							</tr>
 							<% i=i+1; %>
 							<%}%>

@@ -130,6 +130,27 @@ footer {
 													</div>
 												</div>
 											</div>
+											<div class="col-sm-6">
+												<div class="form-group">
+													<div class="col-sm-12">
+														<label>Product Rate</label> <input type="text"
+															class="form-control" value=""
+															placeholder="Enter product rate" name="product_rate">
+													</div>
+												</div>
+											</div>
+											
+										</div>
+										<div class="row">
+											<div class="col-sm-6">
+												<div class="form-group">
+													<div class="col-sm-12">
+														<label>Product description</label> <input type="text"
+															class="form-control" value=""
+															placeholder="Enter product description" name="product_description">
+													</div>
+												</div>
+											</div>
 											
 										</div>
 

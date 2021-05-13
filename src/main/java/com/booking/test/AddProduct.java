@@ -22,10 +22,12 @@ public class AddProduct extends HttpServlet {
 			throws ServletException, IOException 
 	{		
 		response.setContentType("text/html");
-		String proName = "";
-		String proId = "";
-		String proCategory = "";
-		String proClr = "";
+		String proName = null;
+		String proId = null;
+		String proCategory = null;
+		String proClr = null;
+		String proRate =null;
+		String proDes=null;
 		
 		PrintWriter out= response.getWriter();
 
@@ -56,12 +58,15 @@ public class AddProduct extends HttpServlet {
 				        	proCategory = fileItem.getString();
 				        }else if (fileItem.getFieldName().equals("product_clr")) {
 				        	proClr = fileItem.getString();
+				        }else if (fileItem.getFieldName().equals("product_rate")) {
+				        	proRate =fileItem.getString().toString();
+				        }else if (fileItem.getFieldName().equals("product_description")) {
+				        	proDes = fileItem.getString();
 				        }
 					}
 				} else {
 					if (fileItem.getSize() > 0) {
-						file_name=fileItem.getName();
-						
+						file_name=fileItem.getName();						
 						fileItem.write(new File("C:\\Users\\Thiru Raja\\eclipse-workspace\\WebTask1\\src\\main\\webapp\\images\\" + fileItem.getName()));
 					}
 				}
@@ -69,13 +74,15 @@ public class AddProduct extends HttpServlet {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		out.println(proName);
-		out.println(proId);
-		out.println(proCategory);
-		out.println(proClr);
-		out.println(file_name);
+//		out.println(proName);
+//		out.println(proId);
+//		out.println(proCategory);
+//		out.println(proClr);
+//		out.println(file_name);
+//		out.println(Integer.parseInt(proRate));
+//		out.println(proDes);
 		
-		DB.productList.add(new Product(proName,proCategory,proClr,proId,file_name));
+		DB.productList.add(new Product(proName,proCategory,proClr,proId,file_name,proRate,proDes));
 		response.sendRedirect("jsp/Admin/Product/viewProduct.jsp");
 	}
 }

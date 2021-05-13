@@ -30,6 +30,23 @@
 		<servlet-name>AddPro</servlet-name>
 		<url-pattern>/addProduct</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CusRegis</servlet-name>
+		<servlet-class>com.booking.test.CustomerRegister</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CusRegis</servlet-name>
+		<url-pattern>/customerRegister</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>CusLog</servlet-name>
+		<servlet-class>com.booking.test.CustomerLogin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CusLog</servlet-name>
+		<url-pattern>/customerLogin</url-pattern>
+	</servlet-mapping>
 	<display-name>WebTask1</display-name>
 
 	<welcome-file-list>

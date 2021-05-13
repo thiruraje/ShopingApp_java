@@ -69,7 +69,7 @@
         <div class="flex-center position-ref full-height">
         	<div class="top-right links">
                <a href="jsp/Admin/login.jsp">Admin</a>
-               <a href="/WebTask1/Page/Module/Customer/login.html">Customer</a>
+               <a href="jsp/Customer/login.jsp">Customer</a>
             </div>
             <div class="content">
                 <div class="title m-b-md">
