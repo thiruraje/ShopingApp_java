@@ -63,7 +63,7 @@ for(Product pro:products){
 						<div class="col-lg-4 col-md-6 mb-4">
 						<div class="card h-100">
 							<a href="#!"><img class="card-img-top"
-								src="https://via.placeholder.com/700x400" alt="..." /></a>
+								src="/WebTask1/images/<%=pro.getProImg() %>" alt="..." /></a>
 							<div class="card-body">
 								<h4 class="card-title">
 									<a href="#!"><%=pro.getProName()%></a>
@@ -72,7 +72,7 @@ for(Product pro:products){
 								<p class="card-text"><%=pro.getProDes()%></p>
 							</div>
 							<div class="card-footer">
-								<a href="#!" class="text-muted">Details</a>
+								<a href="details.jsp?id=<%=pro.getProId()%>" class="text-muted">Details</a>
 
 							</div>
 						</div>

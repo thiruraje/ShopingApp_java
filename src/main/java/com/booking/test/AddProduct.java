@@ -74,15 +74,22 @@ public class AddProduct extends HttpServlet {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-//		out.println(proName);
-//		out.println(proId);
-//		out.println(proCategory);
-//		out.println(proClr);
-//		out.println(file_name);
-//		out.println(Integer.parseInt(proRate));
-//		out.println(proDes);
 		
-		DB.productList.add(new Product(proName,proCategory,proClr,proId,file_name,proRate,proDes));
+		DB.productList.add(new Product(proName,proCategory,proClr,proId,proRate,proDes,file_name));
+//		for(Product p:DB.productList) {
+//			out.println(p.getProName());
+//			out.println(p.getProId());
+//			out.println(p.getProCategory());
+//			out.println(p.getProColor());
+//			out.println(p.getProImg());
+//			out.println();
+//			out.println(p.getProRate());
+//			out.println();
+//			out.println(p.getProDes());
+//			
+//			
+//			
+//		}
 		response.sendRedirect("jsp/Admin/Product/viewProduct.jsp");
 	}
 }

@@ -10,16 +10,16 @@ public class Product {
 	private String proDes;
 	
 	
-	public Product(String proName, String proCategory, String proColor, String proId, String proImg, String proRate,
-			String proDes) {
+	public Product(String proName, String proCategory, String proColor, String proId, String proRate,
+			String proDes,String proImg) {
 		super();
 		this.proName = proName;
 		this.proCategory = proCategory;
 		this.proColor = proColor;
 		this.proId = proId;
-		this.proImg = proImg;
 		this.proRate = proRate;
 		this.proDes = proDes;
+		this.proImg = proImg;
 	}
 	public String getProName() {
 		return proName;

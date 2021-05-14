@@ -69,17 +69,16 @@ footer {
 					<small>View Product Page</small>
 				</h4>
 				<hr>
-				${pageContext.request.contextPath}
 				<table class="table">
 					<thead>
 						<tr>
+							<th>#</th>
 							<th scope="col">PRODUCT IMAGE</th>
 							<th scope="col">PRODUCT NAME</th>
 							<th scope="col">CATEGORY</th>
 							<th scope="col">ID</th>
 							<th scope="col">COLOR</th>
 							<th scope="col">RATE</th>
-							<th scope="col">DES</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -87,23 +86,21 @@ footer {
 						<% int i=1; %>
 							<%for (Product pro : productList) {%>
 							<tr>
-								<td><img src="C:\Users\Thiru Raja\eclipse-workspace\WebTask1\src\main\webapp\images\<%=pro.getProImg()%>" width="60" height="60" alt=""/></td>
+							<td><%=i %></td>
+								<td><img src="/WebTask1/images/<%=pro.getProImg() %>" width="60" height="60" alt=""/></td>
 								<td><%=pro.getProName() %></td>
 								<td><%=pro.getProCategory() %></td>
 								<td><%=pro.getProId() %></td>
 								<td><%=pro.getProColor() %></td>
 								<td><%=pro.getProRate()%></td>
-								<td><%=pro.getProDes()%></td>
 							</tr>
 							<% i=i+1; %>
 							<%}%>
 						<%} else {%>
 							<td>No Data found!!!</td>
-						<%} %>
-						
+						<%} %>						
 					</tbody>
 				</table>
-
 			</div>
 		</div>
 	</div>

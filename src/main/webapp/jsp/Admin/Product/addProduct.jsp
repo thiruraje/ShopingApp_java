@@ -80,7 +80,7 @@ footer {
 													<div class="col-sm-12">
 														<label>Product Name</label> <input type="text"
 															class="form-control" value=""
-															placeholder="Enter product Name" name="product_name">
+															placeholder="Enter product Name" name="product_name" required>
 													</div>
 												</div>
 											</div>
@@ -89,7 +89,7 @@ footer {
 													<div class="col-sm-12">
 														<label>Product Id</label> <input type="text"
 															class="form-control" value=""
-															placeholder="Enter product id" name="product_id">
+															placeholder="Enter product id" name="product_id" required>
 													</div>
 												</div>
 											</div>
@@ -115,39 +115,41 @@ footer {
 													<div class="col-sm-12">
 														<label>Product Color</label> <input type="text"
 															class="form-control" value=""
-															placeholder="Enter product color" name="product_clr">
+															placeholder="Enter product color" name="product_clr" required>
 													</div>
 												</div>
 											</div>
 										</div>
 										<div class="row">
+											
 											<div class="col-sm-6">
 												<div class="form-group">
 													<div class="col-sm-12">
-														<label>Product Image</label> 
-														<input class="form-control" type="file" id="productImg" name="filename">
-														
+														<label>Product Rate</label> <input type="text"
+															class="form-control" value=""
+															placeholder="Enter product rate" name="product_rate" required>
 													</div>
 												</div>
 											</div>
 											<div class="col-sm-6">
 												<div class="form-group">
 													<div class="col-sm-12">
-														<label>Product Rate</label> <input type="text"
+														<label>Product description</label> <input type="text"
 															class="form-control" value=""
-															placeholder="Enter product rate" name="product_rate">
+															placeholder="Enter product description" name="product_description" required>
 													</div>
 												</div>
 											</div>
 											
 										</div>
 										<div class="row">
+											
 											<div class="col-sm-6">
 												<div class="form-group">
 													<div class="col-sm-12">
-														<label>Product description</label> <input type="text"
-															class="form-control" value=""
-															placeholder="Enter product description" name="product_description">
+														<label>Product Image</label> 
+														<input class="form-control" type="file" id="productImg" name="filename">
+														
 													</div>
 												</div>
 											</div>

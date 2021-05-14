@@ -21,7 +21,7 @@ ArrayList<Product> productList = (ArrayList<Product>) session.getAttribute("prod
 	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta name="description" content="" />
 <meta name="author" content="" />
-<title>Shop Homepage - Start Bootstrap Template</title>
+<title>Booking Now</title>
 <!-- Favicon-->
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 <!-- Core theme CSS (includes Bootstrap)-->
@@ -31,8 +31,18 @@ ArrayList<Product> productList = (ArrayList<Product>) session.getAttribute("prod
 	<!-- Navigation-->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container">
-			<a class="navbar-brand" href="#!">Welcome
+			<a class="navbar-brand" href="home.jsp">Welcome
 				${currentCustomer.getCusName()}</a>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="cart.jsp">
+                                Cart
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 		</div>
 	</nav>
 	<!-- Page Content-->
@@ -62,7 +72,7 @@ ArrayList<Product> productList = (ArrayList<Product>) session.getAttribute("prod
 						<div class="col-lg-4 col-md-6 mb-4">
 						<div class="card h-100">
 							<a href="#!"><img class="card-img-top"
-								src="https://via.placeholder.com/700x400" alt="..." /></a>
+								src="/WebTask1/images/<%=pro.getProImg() %>" alt="..." /></a>
 							<div class="card-body">
 								<h4 class="card-title">
 									<a href="#!"><%=pro.getProName()%></a>
@@ -71,7 +81,7 @@ ArrayList<Product> productList = (ArrayList<Product>) session.getAttribute("prod
 								<p class="card-text"><%=pro.getProDes()%></p>
 							</div>
 							<div class="card-footer">
-								<a href="#!" class="text-muted">Details</a>
+								<a href="details.jsp?id=<%=pro.getProId()%>" class="text-muted">Details</a>
 
 							</div>
 						</div>
@@ -81,10 +91,6 @@ ArrayList<Product> productList = (ArrayList<Product>) session.getAttribute("prod
 					<%} else {%>
 					<td>No Products found!!!</td>
 					<%} %>
-					
-				
-
-
 				</div>
 			</div>
 		</div>
