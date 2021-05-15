@@ -1,4 +1,6 @@
 <%@page import="java.util.HashSet"%>
+<%@page import="java.util.Random"%>
+
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
@@ -6,6 +8,9 @@
 
 <%
 HashSet<String> categoryList = (HashSet<String>) session.getAttribute("categoryList");
+
+Random rand = new Random();
+Integer n = rand.nextInt(90000) + 10000;
 %>
 <html lang="en">
 <head>
@@ -89,8 +94,8 @@ footer {
 												<div class="form-group">
 													<div class="col-sm-12">
 														<label>Product Id</label> <input type="text"
-															class="form-control" value=""
-															placeholder="Enter product id" name="product_id" required>
+															class="form-control" value="<%=String.valueOf(n) %>"
+															placeholder="Enter product id" name="product_id" readonly>
 													</div>
 												</div>
 											</div>
