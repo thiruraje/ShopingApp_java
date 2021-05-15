@@ -41,6 +41,12 @@ ArrayList<Product> productList = (ArrayList<Product>) session.getAttribute("prod
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="orders.jsp">
+                                Orders
+                                <span class="sr-only"></span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
 		</div>

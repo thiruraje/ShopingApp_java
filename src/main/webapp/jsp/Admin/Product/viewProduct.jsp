@@ -60,6 +60,7 @@ footer {
 					<li><a href="../Category/viewCategory.jsp">View Category</a></li>
 					<li><a href="addProduct.jsp">Add Products</a></li>
 					<li class="active"><a href="viewProduct.jsp">View Products</a></li>
+					<li><a href="../Customer/viewCustomer.jsp">Customers</a></li>
 				</ul>
 				<br>
 			</div>
@@ -72,7 +73,7 @@ footer {
 				<table class="table">
 					<thead>
 						<tr>
-							<th>#</th>
+						<th>#</th>
 							<th scope="col">PRODUCT IMAGE</th>
 							<th scope="col">PRODUCT NAME</th>
 							<th scope="col">CATEGORY</th>
@@ -98,9 +99,11 @@ footer {
 							<%}%>
 						<%} else {%>
 							<td>No Data found!!!</td>
-						<%} %>						
+						<%} %>
+						
 					</tbody>
 				</table>
+
 			</div>
 		</div>
 	</div>

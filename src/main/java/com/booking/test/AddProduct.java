@@ -16,7 +16,6 @@ import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 public class AddProduct extends HttpServlet {
-	private final String UPLOAD_DIRECTORY = "C:/uploads";
 
 	public void doPost( HttpServletRequest request, HttpServletResponse response)  
 			throws ServletException, IOException 
@@ -90,6 +89,6 @@ public class AddProduct extends HttpServlet {
 //			
 //			
 //		}
-		response.sendRedirect("jsp/Admin/Product/viewProduct.jsp");
+		response.sendRedirect("jsp/Admin/Product/addProduct.jsp");
 	}
 }

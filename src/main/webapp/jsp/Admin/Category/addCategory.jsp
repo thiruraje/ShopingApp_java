@@ -57,6 +57,7 @@ footer {
 					<li><a href="viewCategory.jsp">View Category</a></li>
 					<li><a href="../Product/addProduct.jsp">Add Products</a></li>
 					<li><a href="../Product/viewProduct.jsp">View Products</a></li>
+					<li><a href="../Customer/viewCustomer.jsp">Customers</a></li>
 				</ul>
 				<br>
 			</div>

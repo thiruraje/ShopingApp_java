@@ -170,7 +170,7 @@ html, body {
         <!-- Product Pricing -->
         <div class="product-price">
           <span><%=product.getProRate() %>$</span>
-          <a href="cart.jsp" class="cart-btn">Add to cart</a>
+          <a href="cart.jsp?id=<%=product.getProId() %>" class="cart-btn">Add to cart</a>
         </div>
       </div>
     </main>
