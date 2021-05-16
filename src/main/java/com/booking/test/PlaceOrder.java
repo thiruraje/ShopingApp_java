@@ -24,7 +24,7 @@ public class PlaceOrder extends HttpServlet {
 		Integer shippingAmount=100;
 		Boolean isDiscount =false;
 		Integer finalAmt=0;
-		ProductDetails obj = new ProductDetails();
+		AddCart obj = new AddCart();
 		Customer cusObj=(Customer) request.getSession().getAttribute("currentCustomer");
 
 		if(promoCode.equals("1207")) {

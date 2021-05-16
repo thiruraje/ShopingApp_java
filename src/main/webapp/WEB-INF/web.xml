@@ -47,6 +47,14 @@
 		<servlet-name>CusLog</servlet-name>
 		<url-pattern>/customerLogin</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>Cart</servlet-name>
+		<servlet-class>com.booking.test.AddCart</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Cart</servlet-name>
+		<url-pattern>/addCart</url-pattern>
+	</servlet-mapping>
 	
 	<servlet>
 		<servlet-name>order</servlet-name>

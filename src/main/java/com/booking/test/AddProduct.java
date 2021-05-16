@@ -24,7 +24,7 @@ public class AddProduct extends HttpServlet {
 		String proName = null;
 		String proId = null;
 		String proCategory = null;
-		String proClr = null;
+		String[] proClr = null;
 		String proRate =null;
 		String proDes=null;
 		
@@ -56,7 +56,7 @@ public class AddProduct extends HttpServlet {
 				        }else if (fileItem.getFieldName().equals("product_category")) {
 				        	proCategory = fileItem.getString();
 				        }else if (fileItem.getFieldName().equals("product_clr")) {
-				        	proClr = fileItem.getString();
+				        	proClr = fileItem.getString().split(",");
 				        }else if (fileItem.getFieldName().equals("product_rate")) {
 				        	proRate =fileItem.getString().toString();
 				        }else if (fileItem.getFieldName().equals("product_description")) {
@@ -73,22 +73,7 @@ public class AddProduct extends HttpServlet {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		DB.productList.add(new Product(proName,proCategory,proClr,proId,proRate,proDes,file_name));
-//		for(Product p:DB.productList) {
-//			out.println(p.getProName());
-//			out.println(p.getProId());
-//			out.println(p.getProCategory());
-//			out.println(p.getProColor());
-//			out.println(p.getProImg());
-//			out.println();
-//			out.println(p.getProRate());
-//			out.println();
-//			out.println(p.getProDes());
-//			
-//			
-//			
-//		}
+		DB.productList.add(new Product(proName,proCategory,proClr,proId,file_name,proRate,proDes));
 		response.sendRedirect("jsp/Admin/Product/addProduct.jsp");
 	}
 }

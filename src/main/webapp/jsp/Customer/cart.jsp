@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 
-<%@ page import="com.booking.test.ProductDetails"%>
+<%@ page import="com.booking.test.AddCart"%>
 <%@ page import="com.booking.test.Product"%>
 <%@ page import="com.booking.test.Customer"%>
 <%@ page import="java.util.ArrayList"%>
@@ -11,16 +11,12 @@ Integer totalAmount=0;
 Integer shippingAmount=100;
 %>
 <%
-String proId = request.getParameter("id");
 ArrayList<Product> AllCartProducts = new ArrayList<Product>();
 
-ProductDetails obj = new ProductDetails();
+AddCart obj = new AddCart();
 
-if (proId != null) {
-	AllCartProducts = obj.addCart(proId, (Customer) session.getAttribute("currentCustomer"));
-} else {
-	AllCartProducts = obj.addCart((Customer) session.getAttribute("currentCustomer"));
-}
+AllCartProducts = obj.getCartItems((Customer) session.getAttribute("currentCustomer"));
+
 if(AllCartProducts != null){
 	totalAmount=obj.getTotalAmount((Customer) session.getAttribute("currentCustomer"));	
 }
@@ -212,10 +208,18 @@ button:focus {
 			</div>
 			<div class="col-7">
 				<div class="row text-right">
-					<div class="col-4">
+					<div class="col-3">
 						<h6 class="mt-2">Category</h6>
 					</div>
-					<div class="col-4">
+					<div class="col-3">
+						<h6 class="mt-2">Color</h6>
+					</div>
+					
+					<div class="col-3">
+						<h6 class="mt-2">Size</h6>
+					</div>
+					
+					<div class="col-3">
 						<h6 class="mt-2">Price</h6>
 					</div>
 				</div>
@@ -243,10 +247,25 @@ button:focus {
 			</div>
 			<div class="my-auto col-7">
 				<div class="row text-right">
-					<div class="col-4">
+					<div class="col-3">
 						<p class="mob-text"><%=pro.getProCategory()%></p>
 					</div>
-					<div class="col-4">
+					<div class="col-3">
+						<h6 class="mob-text">
+							<%=pro.getProSelectedClr()%></h6>
+					</div>
+					<% if(pro.getProCategory().equals("clothes")){ %>
+					<div class="col-3">
+						<h6 class="mob-text">
+							<%=pro.getProSelectedSIze()%></h6>
+					</div>
+					<%}else {%>
+					<div class="col-3">
+						<h6 class="mob-text">
+							-</h6>
+					</div>
+					<%} %>
+					<div class="col-3">
 						<h6 class="mob-text">
 							$<%=pro.getProRate()%></h6>
 					</div>
@@ -287,7 +306,7 @@ button:focus {
 			</div>
 		</div>
 		<%
-		} else {
+		} else{
 		%>
 		<td>Still no products added!!!</td>
 		<%

@@ -3,23 +3,37 @@ package com.booking.test;
 public class Product {
 	private String proName;
 	private String proCategory;
-	private String proColor;
+	private String[] proColor;
 	private String proId;
 	private String proImg;
 	private String proRate;
 	private String proDes;
+	private String proSelectedClr = null;
+	private String proSelectedSIze = null;
 	
+	public String getProSelectedClr() {
+		return proSelectedClr;
+	}
+	public void setProSelectedClr(String proSelectedClr) {
+		this.proSelectedClr = proSelectedClr;
+	}
+	public String getProSelectedSIze() {
+		return proSelectedSIze;
+	}
+	public void setProSelectedSIze(String proSelectedSIze) {
+		this.proSelectedSIze = proSelectedSIze;
+	}
 	
-	public Product(String proName, String proCategory, String proColor, String proId, String proRate,
-			String proDes,String proImg) {
+	public Product(String proName, String proCategory, String[] proColor, String proId, String proImg, String proRate,
+			String proDes) {
 		super();
 		this.proName = proName;
 		this.proCategory = proCategory;
 		this.proColor = proColor;
 		this.proId = proId;
+		this.proImg = proImg;
 		this.proRate = proRate;
 		this.proDes = proDes;
-		this.proImg = proImg;
 	}
 	public String getProName() {
 		return proName;
@@ -33,10 +47,10 @@ public class Product {
 	public void setProCategory(String proCategory) {
 		this.proCategory = proCategory;
 	}
-	public String getProColor() {
+	public String[] getProColor() {
 		return proColor;
 	}
-	public void setProColor(String proColor) {
+	public void setProColor(String[] proColor) {
 		this.proColor = proColor;
 	}
 	public String getProId() {
@@ -65,10 +79,6 @@ public class Product {
 	}
 	
 	
-
 	
 	
-	
-	
-
 }

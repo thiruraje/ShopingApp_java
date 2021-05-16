@@ -78,7 +78,6 @@ footer {
 							<th scope="col">PRODUCT NAME</th>
 							<th scope="col">CATEGORY</th>
 							<th scope="col">ID</th>
-							<th scope="col">COLOR</th>
 							<th scope="col">RATE</th>
 						</tr>
 					</thead>
@@ -92,7 +91,6 @@ footer {
 								<td><%=pro.getProName() %></td>
 								<td><%=pro.getProCategory() %></td>
 								<td><%=pro.getProId() %></td>
-								<td><%=pro.getProColor() %></td>
 								<td><%=pro.getProRate()%></td>
 							</tr>
 							<% i=i+1; %>
