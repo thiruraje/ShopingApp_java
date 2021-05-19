@@ -64,6 +64,15 @@
 		<servlet-name>order</servlet-name>
 		<url-pattern>/placeOrder</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>conorder</servlet-name>
+		<servlet-class>com.booking.test.ConformOrder</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>conorder</servlet-name>
+		<url-pattern>/conformOrder</url-pattern>
+	</servlet-mapping>
 	<display-name>WebTask1</display-name>
 
 	<welcome-file-list>

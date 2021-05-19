@@ -14,10 +14,7 @@ public class PlaceOrder extends HttpServlet {
 	public void doPost( HttpServletRequest request, HttpServletResponse response)  
 	        throws ServletException, IOException 
 	{		
-		String cardName = request.getParameter("cname");
-		String cardNumber = request.getParameter("cnum");
-		String cardDate = request.getParameter("exp");
-		String cardCvv = request.getParameter("cvv");
+		PrintWriter out= response.getWriter();
 		
 		String promoCode = request.getParameter("promo_code");
 		Integer totalAmount=0;
@@ -37,14 +34,14 @@ public class PlaceOrder extends HttpServlet {
 			
 		}
 
-		if(DB.orders.add(new Order(cusObj,DB.cartDetails.get(cusObj.getCusMobile()),(totalAmount+shippingAmount)
-				,finalAmt,isDiscount,new Date(System.currentTimeMillis())))) {
-			DB.cartDetails.remove(cusObj.getCusMobile());
-			response.sendRedirect("jsp/Customer/home.jsp");	
-		}
+
+		request.getSession().setAttribute("promoCode",promoCode);		
+		request.getSession().setAttribute("finalAmount",finalAmt);
+		request.getSession().setAttribute("totalAmount",totalAmount);
+		response.sendRedirect("jsp/Customer/cardDetail.jsp");	
 		response.setContentType("text/html");
-		PrintWriter out= response.getWriter();
-		out.println(DB.orders);
+		
+//		out.println(DB.orders);
 		
 				
 	}

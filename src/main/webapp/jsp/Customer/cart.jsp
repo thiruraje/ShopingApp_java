@@ -278,11 +278,21 @@ button:focus {
 		}
 		%>
 		<div class="row justify-content-center">
+		<form class="form-horizontal" method="post"
+			action="/WebTask1/placeOrder">
 			<div class="col-lg-12">
 				<div class="card">
 					<div class="row">
 						<div class="col-lg-3 radio-group"></div>
 						<div class="col-lg-5">
+							
+								<div class="row px-2">
+									<div class="form-group col-md-6">
+										<label class="form-control-label">Promo Code</label> <input
+											type="text"  name="promo_code"
+											placeholder="1207">
+									</div>
+								</div>	
 							
 
 						</div>
@@ -299,11 +309,13 @@ button:focus {
 								<p class="mb-1 text-left">Total</p>
 								<h6 class="mb-1 text-right" id="totalAmt">$<%=shippingAmount+totalAmount %></h6>
 							</div>
-							<a href="placeOrder.jsp" class="cart-btn">Place Order</a>
+							<button class="btn-block btn-blue"><span id="place">Order</span></button>
+							
 						</div>
 					</div>
 				</div>
 			</div>
+			</form>
 		</div>
 		<%
 		} else{

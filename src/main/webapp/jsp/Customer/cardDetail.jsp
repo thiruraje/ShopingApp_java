@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%
+Integer finalAmt = (Integer) session.getAttribute("finalAmount");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -150,16 +153,28 @@ button:focus {
 </head>
 <body>
 	<div class="container px-4 py-5 mx-auto">
-	<div class="col-5">
-            <h4 class="heading">Booking Now Place Order</h4>
-        </div>
+		<div class="col-5">
+			<h4 class="heading">Booking Now Place Order</h4>
+		</div>
+
 		<form class="form-horizontal" method="post"
-			action="/WebTask1/placeOrder">
+			action="/WebTask1/conformOrder" enctype="text/plain">
 			<div class="row justify-content-center">
+
 				<div class="col-lg-12">
 					<div class="card">
 						<div class="row">
 							<div class="col-lg-5">
+								<div class="row px-2">
+									<div class="form-group col-md-6">
+										<label class="form-control-label">Total Amount:</label>
+										<div>
+											<span><h3><%=finalAmt%></h3></span>
+										</div>
+
+									</div>
+
+								</div>
 								<div class="row px-2">
 									<div class="form-group col-md-6">
 										<label class="form-control-label">Name on Card</label> <input
@@ -183,18 +198,11 @@ button:focus {
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-5">
-								<div class="row px-2">
-									<div class="form-group col-md-6">
-										<label class="form-control-label">Promo Code</label> <input
-											type="text"  name="promo_code"
-											placeholder="1207">
-									</div>
-								</div>	
-							</div>
+
 						</div>
 						<div>
-						<button class="btn-block btn-blue"><span id="place">Order</span></button>
+						<button class="btn-block btn-blue" type="submit" value="submit"><span id="place">Order</span></button>
+
 						</div>
 					</div>
 				</div>
